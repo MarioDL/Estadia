@@ -8,10 +8,8 @@ package Vista;
 
 import Controlador.ConexionBD;
 import Controlador.RolesXUsuarioCommands;
-import Controlador.TamborCommands;
 import Controlador.UsuarioCommands;
 import Modelo.RolesXUsuario;
-import Modelo.Tambor;
 import Modelo.Usuario;
 import java.util.ArrayList;
 import java.util.List;

@@ -829,7 +829,7 @@ public class PnlRecepcionCuero extends javax.swing.JPanel {
                 false,
                 true)));
     dcFecha1EntradaSemiterminado.setCalendarPreferredSize(new java.awt.Dimension(260, 195));
-    dcFecha1EntradaSemiterminado.setWeekStyle(datechooser.view.WeekDaysStyle.SHORT);
+    dcFecha1EntradaSemiterminado.setFormat(2);
     try {
         dcFecha1EntradaSemiterminado.setDefaultPeriods(new datechooser.model.multiple.PeriodSet());
     } catch (datechooser.model.exeptions.IncompatibleDataExeption e1) {
@@ -1136,7 +1136,7 @@ try {
         }
         catch (Exception ex)
         {
-            Logger.getLogger(PnlCross.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PnlRecepcionCuero.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnRealizarEntradaEnvSemiActionPerformed
 
