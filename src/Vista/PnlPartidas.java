@@ -382,7 +382,7 @@ public class PnlPartidas extends javax.swing.JPanel {
         inicializarCamposEliPzaInvCrudo();
         
         dlgEliPzaInvCrudo.setModal(true);
-        dlgEliPzaInvCrudo.setSize(430, 490);
+        dlgEliPzaInvCrudo.setSize(430, 590);
         dlgEliPzaInvCrudo.setPreferredSize(dlgEliPzaInvCrudo.getSize());
         dlgEliPzaInvCrudo.setLocationRelativeTo(null);
         dlgEliPzaInvCrudo.setVisible(true);
@@ -879,7 +879,7 @@ public class PnlPartidas extends javax.swing.JPanel {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnRealizarEntradaEnvSemi, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnRealizarEntradaEnvSemi)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnCancelarAgregarEnvSemi)))
                 .addGap(6, 6, 6))

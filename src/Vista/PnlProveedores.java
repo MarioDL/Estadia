@@ -211,13 +211,13 @@ public class PnlProveedores extends javax.swing.JPanel {
     public void abrirDialogoAgregar()
     {   try 
         {
-            dlgAgregarProveedor.setSize(410, 210);
+            txtNombreProvAgregar.setText("");
+            
+            dlgAgregarProveedor.setSize(410, 250);
             dlgAgregarProveedor.setPreferredSize(dlgAgregarProveedor.getSize());
             dlgAgregarProveedor.setLocationRelativeTo(null);
             dlgAgregarProveedor.setModal(true);
             dlgAgregarProveedor.setVisible(true);
-
-            txtNombreProvAgregar.setText("");
         } 
         catch (Exception e) 
         {

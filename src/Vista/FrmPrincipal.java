@@ -1525,12 +1525,12 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
     private void jmMermasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmMermasActionPerformed
         cargarConfActMerma();
-        abrirDialogo(dlgMermas, 310, 280);
+        abrirDialogo(dlgMermas, 350, 300);
     }//GEN-LAST:event_jmMermasActionPerformed
 
     private void jmRangosPesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmRangosPesoActionPerformed
         cargarConfActRango();
-        abrirDialogo(dlgRangos, 325, 210);
+        abrirDialogo(dlgRangos, 360, 240);
     }//GEN-LAST:event_jmRangosPesoActionPerformed
 
     private void btnPartidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPartidasActionPerformed
