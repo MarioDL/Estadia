@@ -835,6 +835,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Tambores"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jmTamboresActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jmSubProcesos">
               <Properties>
@@ -846,6 +849,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="SubProcesos"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jmSubProcesosActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jmProveedores">
               <Properties>
@@ -937,6 +943,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Insumos por Proceso"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jmInsumosXprocesoActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jmCostoCuero">
               <Properties>
@@ -1287,6 +1296,9 @@
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="horizontalTextPosition" type="int" value="4"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFichasProduccionActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

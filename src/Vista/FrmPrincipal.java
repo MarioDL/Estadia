@@ -50,6 +50,10 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private final String imagen="/Imagenes/logo_esmar.png";
     PnlProveedores pnlProveedores;
     PnlPartidas pnlPartidas;
+    PnlFichaProduccion pnlFichaProduccion;
+    PnlInsXproc pnlInsXproc;
+    PnlSubProcesos pnlSubProcesos;
+    PnlTambores pnlTambores;
     /**
      * Creates new form FrmPrincipal
      */
@@ -1142,6 +1146,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
         btnFichasProduccion.setText("Fichas de Producción");
         btnFichasProduccion.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnFichasProduccion.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnFichasProduccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFichasProduccionActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlMenuLayout = new javax.swing.GroupLayout(pnlMenu);
         pnlMenu.setLayout(pnlMenuLayout);
@@ -1291,11 +1300,21 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jmTambores.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jmTambores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/barril.png"))); // NOI18N
         jmTambores.setText("Tambores");
+        jmTambores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmTamboresActionPerformed(evt);
+            }
+        });
         jmpCatalogos.add(jmTambores);
 
         jmSubProcesos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jmSubProcesos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cueroProceso.png"))); // NOI18N
         jmSubProcesos.setText("SubProcesos");
+        jmSubProcesos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmSubProcesosActionPerformed(evt);
+            }
+        });
         jmpCatalogos.add(jmSubProcesos);
 
         jmProveedores.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -1352,6 +1371,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jmInsumosXproceso.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jmInsumosXproceso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flask.png"))); // NOI18N
         jmInsumosXproceso.setText("Insumos por Proceso");
+        jmInsumosXproceso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmInsumosXprocesoActionPerformed(evt);
+            }
+        });
         jmpConfiguraciones.add(jmInsumosXproceso);
 
         jmCostoCuero.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -1547,6 +1571,75 @@ public class FrmPrincipal extends javax.swing.JFrame {
             Logger.getLogger(FrmPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnPartidasActionPerformed
+
+    private void btnFichasProduccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFichasProduccionActionPerformed
+        try {
+            pnlFichaProduccion = new PnlFichaProduccion();
+            pnlPrincipalx.removeAll();
+            pnlPrincipalx.add(pnlFichaProduccion, BorderLayout.CENTER);
+            pnlPrincipalx.paintAll(pnlFichaProduccion.getGraphics());
+            
+            lblVentana.setText("Fichas de Producción");
+            ImageIcon ico=new ImageIcon("src/Imagenes/document_index.png");
+            lblVentana.setIcon(ico);
+        } catch (Exception ex) {
+            Logger.getLogger(FrmPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnFichasProduccionActionPerformed
+
+    private void jmInsumosXprocesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmInsumosXprocesoActionPerformed
+        try {
+            pnlInsXproc = new PnlInsXproc();
+            pnlPrincipalx.removeAll();
+            pnlPrincipalx.add(pnlInsXproc, BorderLayout.CENTER);
+            pnlPrincipalx.paintAll(pnlInsXproc.getGraphics());
+            
+            lblVentana.setText("Insumos Por Proceso");
+            ImageIcon ico=new ImageIcon("src/Imagenes/flask.png");
+            lblVentana.setIcon(ico);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+//            Logger.getLogger(FrmPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jmInsumosXprocesoActionPerformed
+
+    private void jmSubProcesosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmSubProcesosActionPerformed
+        try 
+        {
+            pnlSubProcesos = new PnlSubProcesos();
+            pnlPrincipalx.removeAll();
+            pnlPrincipalx.add(pnlSubProcesos, BorderLayout.CENTER);
+            pnlPrincipalx.paintAll(pnlSubProcesos.getGraphics());
+            
+            lblVentana.setText("Catálogo de SubProcesos");
+            ImageIcon ico=new ImageIcon("src/Imagenes/cueroProceso.png");
+            lblVentana.setIcon(ico);
+        } 
+        catch (Exception ex) 
+        {
+            System.out.println(ex);
+            JOptionPane.showMessageDialog(null, "Error al abrir JDialog","Error",JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jmSubProcesosActionPerformed
+
+    private void jmTamboresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmTamboresActionPerformed
+        try 
+        {
+            pnlTambores = new PnlTambores();
+            pnlPrincipalx.removeAll();
+            pnlPrincipalx.add(pnlTambores, BorderLayout.CENTER);
+            pnlPrincipalx.paintAll(pnlTambores.getGraphics());
+            
+            lblVentana.setText("Catálogo de Tambores");
+            ImageIcon ico=new ImageIcon("src/Imagenes/barril.png");
+            lblVentana.setIcon(ico);
+        } 
+        catch (Exception ex) 
+        {
+            System.out.println(ex);
+            JOptionPane.showMessageDialog(null, "Error al abrir JDialog","Error",JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jmTamboresActionPerformed
 
     /**
      * @param args the command line arguments
